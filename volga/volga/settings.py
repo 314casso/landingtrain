@@ -31,7 +31,7 @@ SECRET_KEY = '499092mpc&vh6#aqv17b%98^qpe4wa*kqfo3ril_3^spuv8hax'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'volgatrain.ruscon.global']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'togliatti.ruscon.global']
 
 ADMINS = (
     ('picasso', 'it-support2@ruscon.global'),
