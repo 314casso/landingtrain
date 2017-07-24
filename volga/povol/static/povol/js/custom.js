@@ -4,7 +4,7 @@ $(document).ready(function() {
     });
     setTimeout(function() {
         $('body').addClass('loaded');
-    }, 3000);
+    }, 100);
     $('.counter').counterUp({
         delay: 10,
         time: 1000
@@ -12,8 +12,7 @@ $(document).ready(function() {
 
     $(window).scroll(function () {
         if (($(this).scrollTop() > $('.main_header').height()) && ($(this).scrollTop() < ($(document).height() - $('.schedule_about').height()))) {
-            $('.side_btn').addClass('active');
-            console.log($(this).scrollTop());
+            $('.side_btn').addClass('active');            
         }
         else {
             $('.side_btn').removeClass('active'); 

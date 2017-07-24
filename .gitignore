@@ -5,9 +5,9 @@
 .pydevproject
 local_settings.py
 *.*~
-export/media/*
-export/static/*
-export/wsgi.py
+volga/media/*
+volga/static/*
+volga/wsgi.py
 bin
 include
 lib
