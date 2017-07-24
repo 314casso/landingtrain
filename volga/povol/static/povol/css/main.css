@@ -522,8 +522,8 @@ table tr:not(:last-child) td {
 }
 
 .main_title::after {
-	-webkit-animation: rollIn .5s ease-out 4.5s 1 forwards;
-			animation: rollIn .5s ease-out 4.5s 1 forwards;
+	-webkit-animation: rollIn .5s ease-out 1.5s 1 forwards;
+			animation: rollIn .5s ease-out 1.5s 1 forwards;
 }
 
 @keyframes rollIn {
