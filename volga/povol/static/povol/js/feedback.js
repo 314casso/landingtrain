@@ -54,8 +54,7 @@ function processFeedback(self) {
         success: function(data) {        	
         	$.fancybox.open([{ "src": "#response_message", "modal": true }] );
         	if (data.status) {
-        		$('#response_message .modal-content').addClass('success');
-        		$('#response_message .modal-content').html(data.message);
+        		$('#response_message .modal-content').addClass('success');        		
         		form.trigger("reset");
         	} else {
         		$('#response_message .modal-content').addClass('error');
