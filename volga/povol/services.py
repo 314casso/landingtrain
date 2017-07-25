@@ -59,12 +59,12 @@ def add_lead(data):
     session.auth = HttpNtlmAuth(login, CRM_API['password'], session)
     url =  urlparse.urljoin(CRM_API['url'], 'leads') 
     values = {
-            'subject':  data['email'],
+            'subject':  u'Запрос по услуге Поволжский экспресс',
             'emailaddress1': data['email'],
             'lastname': data['name'],
             'telephone1': data['phone'],
             'description': u'%s' % data['message'],
-            'leadsourcecode': 100000001,
+            'leadsourcecode': 100000004,
             'ownerid@odata.bind': "/teams(8d10cfd9-b06e-e611-80c8-00505693217d)",
               }
     r = session.post(url, json=values)
