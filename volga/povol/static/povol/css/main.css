@@ -1628,7 +1628,7 @@ table tr:not(:last-child) td {
 
 .popup,
 .response_message {
-	width: 360px;
+	width: 560px;
 	padding: 25px 40px 40px;
 	background: #f8f8f8;
 	-webkit-transform: translateY(-50px);
@@ -1747,7 +1747,7 @@ table tr:not(:last-child) td {
 .ok_btn,
 .ok_btn:focus {
 	display: block;
-	width: 60px;
+	width: 120px;
 	height: 50px;
 	margin: 20px auto 0;
 	font: 12px/50px 'GothamProBold';
@@ -2835,5 +2835,13 @@ table tr:not(:last-child) td {
 	}
 
 }
-
 /**************************** /RESPONSIVE ***********************/
+.error {	
+	color: #e11f10;
+	background-color: #ffe1e1;
+}
+
+.success {	
+	color: #000000;
+	background-color: #dcffca;
+}

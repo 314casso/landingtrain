@@ -17,14 +17,19 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from volga import settings
-from povol.views import landing
+from povol.views import landing, feedback
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 
+
 urlpatterns = i18n_patterns(
-    url(r'^$', landing, name='landing'),
+    url(r'^$', landing, name='landing'),    
     url(r'^admin/', admin.site.urls),
 )
+
+urlpatterns += [ 
+    url(r'^feedback$', feedback, name='feedback'),
+]
 
 if settings.DEBUG:
     urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

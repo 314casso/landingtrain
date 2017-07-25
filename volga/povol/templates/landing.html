@@ -491,15 +491,18 @@
 				{% trans "Let us know your cargo information or ask your question in-cluding your contact information" %}
 			</div> <!-- /.note -->
 			<div class="form_wrp rf">
-				<form id="feedback_form" name="feedback_form">
+				<form id="feedback_form" name="feedback_form" action="" method="post" data-url="{% url 'feedback' %}">
 					<div class="field">
-						<input type="text" name="name" class="required good" placeholder="{% trans "Name *" %}">
+						<input type="text" name="name" class="required good" required="required" placeholder="{% trans "Name" %} *">
 					</div>
 					<div class="field">
-						<input type="text" name="email" class="required good" placeholder="{% trans "E-mail *" %}">
+						<input type="email" name="email" class="required good" required="required" placeholder="{% trans "E-mail" %} *">
 					</div>
 					<div class="field">
-						<textarea name="message" class="good" placeholder="{% trans "Message" %}"></textarea>
+						<input type="text" name="phone" class="good" placeholder="{% trans "Phone No. (optionally)" %}">
+					</div>
+					<div class="field">
+						<textarea name="message" class="required good" required="required" placeholder="{% trans "Message" %} *"></textarea>
 					</div>
 					<div class="submit">
 						<input type="submit" class="feedback" value="{% trans "Send" %}">
@@ -528,7 +531,7 @@
 		<script type="text/javascript" src="{% static 'povol/js/jquery.scrollUp.min.js' %}"></script>
 		<script type="text/javascript" src="{% static 'povol/js/jquery-ui.js' %}"></script>
 		<script type="text/javascript" src="{% static 'povol/js/jquery.counterup.min.js' %}"></script>
-		<!-- <script type="text/javascript" src="{% static 'povol/feedback/js/feedback.js' %}"></script> -->
+		<script type="text/javascript" src="{% static 'povol/js/feedback.js' %}"></script>
 		<script type="text/javascript" src="{% static 'povol/js/mm.js' %}"></script>
 		<script type="text/javascript" src="{% static 'povol/js/custom.js' %}"></script>
 		

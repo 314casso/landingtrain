@@ -3,57 +3,53 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.utils.encoding import force_unicode
-import datetime
-import os
-from volga.settings import MEDIA_ROOT
-import unicodecsv as csv
+from povol.services import get_movements_data, add_lead
+from povol.forms import Feedback
+from django.views.decorators.csrf import csrf_exempt
+from django.http.response import JsonResponse
 from django.utils.translation import ugettext as _
+
 
 # Create your views here.
 
 def landing(request):    
-    movements_data = get_movements_data()    
+    movements_data = get_movements_data    
     context = {
         'title': force_unicode('Рускон'),
         'movements_data': movements_data,
-    }    
+    }   
     return render(request, 'landing.html', context)
 
-def get_movements_data():
-    RECORDS = 10        
-    filename = os.path.join(MEDIA_ROOT, 'data', 'datalink.csv')
-    fh = open(filename, "r")
-    dict_reader = csv.DictReader(fh)    
-    key_mapper = {
-                   u'Статус': 'status', 
-                   u'Номер поезда': 'train_number',
-                   u'Место отправления': 'place_of_departure',
-                   u'Дата отправления': 'departure_date',
-                   u'Место назначения': 'destination',
-                   u'Дата прибытия': 'date_of_arrival',              
-                 }
-    
-    data_keys = ('departure_date', 'date_of_arrival')
-    
-    data_trans = {
-                    u'прием заявок': _("Accepting applications"),
-                    u'отправлен': _("Sent"),
-                    u'прибыл': _("Arrived"),
-                    u'новороссийск': _("Novorossiysk"),
-                    u'тольятти': _("Togliatti"),                    
-                  }
-    
-    result = []
-    for line in dict_reader:
-        newline = {}
-        for key, value in line.iteritems():
-            newkey = key_mapper[key]                                     
-            if newkey in data_keys:
-                newline[newkey] = datetime.datetime.strptime(value, "%d.%m.%Y").date()
-            else:
-                key_trans = force_unicode(value).lower()
-                newline[newkey] = data_trans[key_trans] if key_trans in data_trans else value 
-        result.append(newline)
-    
-    result.reverse()  
-    return result[:RECORDS]     
+
+@csrf_exempt
+def feedback(request):
+    form = Feedback(request.POST)
+    if form.is_valid():
+        add_lead(form.cleaned_data)
+        return JsonResponse({'message': _("Your message was successfully sent"), 'status': True}, safe=False)
+    error_list = []
+    for key, value in form.errors.iteritems():
+        label = u'%s' % form[key].label 
+        errors = u' ,'.join(value)
+        error_list.append(u'%s: %s' % (label, errors))        
+    return JsonResponse({'errors': '<br>'.join(error_list), 'status': False}, safe=False) 
+
+
+# class zJvK0lo5EAE19EM9IsodLN44KABh6N4L:
+#     ERROR = 0
+#     def GET(self):
+#         return u'Error, please use post request'
+#     def POST(self):
+#         form = web2lead()
+#         if not form.validates():
+#             return self.ERROR
+#         else:
+#             # form.d.boe and form['boe'].value are equivalent ways of
+#             # extracting the validated arguments from the form.
+#             try:
+#                 add_lead(form.d.name, form.d.email, form.d.message)
+#                 return 1
+#             except:
+#                 return self.ERROR
+
+   

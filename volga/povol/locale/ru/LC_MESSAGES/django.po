@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-21 16:35+0300\n"
+"POT-Creation-Date: 2017-07-25 09:51+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,30 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: services.py:32
+msgid "Booking are open"
+msgstr "Прием заявок"
+
+#: services.py:33
+msgid "Booking are closed"
+msgstr "Прием заявок завершен"
+
+#: services.py:34
+msgid "Dispatched out"
+msgstr "Отправлен"
+
+#: services.py:35
+msgid "Has arrived"
+msgstr "Прибыл"
+
+#: services.py:36
+msgid "Novorossiysk"
+msgstr "Новороссийск"
+
+#: services.py:37
+msgid "Togliatti"
+msgstr "Тольятти"
 
 #: templates/landing.html:41 templates/landing.html:151
 msgid "About"
@@ -65,7 +89,7 @@ msgstr "Быстро"
 msgid "Convenient"
 msgstr "Удобно"
 
-#: templates/landing.html:138 templates/landing.html:520
+#: templates/landing.html:138 templates/landing.html:525
 msgid "Apply Now"
 msgstr "Подать заявку"
 
@@ -334,42 +358,40 @@ msgstr ""
 "контактные данные"
 
 #: templates/landing.html:496
-msgid "Name *"
-msgstr "Ваше имя *"
+#| msgid "Name *"
+msgid "Name"
+msgstr "Ваше имя"
 
 #: templates/landing.html:499
-msgid "E-mail *"
-msgstr "Ваш E-mail *"
+#| msgid "E-mail *"
+msgid "E-mail"
+msgstr "Ваш E-mail"
 
 #: templates/landing.html:502
+msgid "Phone No. (optionally)"
+msgstr "Ваш тел. (по желанию)"
+
+#: templates/landing.html:505
 msgid "Message"
 msgstr "Ваше сообщение"
 
-#: templates/landing.html:505
+#: templates/landing.html:508
 msgid "Send"
 msgstr "Отправить"
 
-#: templates/landing.html:513
+#: templates/landing.html:516
 msgid "Status submit the form:"
 msgstr "Статус отправки формы:"
 
-#: views.py:39
-msgid "Accepting applications"
-msgstr "Прием заявок"
+#: views.py:29
+msgid "Your message was successfully sent"
+msgstr "Ваше сообщение успешно отправлено"
 
-#: views.py:40
-msgid "Sent"
-msgstr "Отправлен"
+#~ msgid "Phone"
+#~ msgstr "Телефон"
 
-#: views.py:41
-msgid "Arrived"
-msgstr "Прибыл"
+#~ msgid "Accepting applications"
+#~ msgstr "Прием заявок"
 
-#: views.py:42
-msgid "Novorossiysk"
-msgstr "Новороссийск"
-
-#: views.py:43
-#| msgid "Togliatti (city)"
-msgid "Togliatti"
-msgstr "Тольятти"
+#~ msgid "Sent"
+#~ msgstr "Отправлен"
