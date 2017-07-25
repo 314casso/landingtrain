@@ -26,7 +26,7 @@ def feedback(request):
     form = Feedback(request.POST)
     if form.is_valid():
         add_lead(form.cleaned_data)
-        return JsonResponse({'message': _("Your message was successfully sent"), 'status': True}, safe=False)
+        return JsonResponse({'status': True})
     error_list = []
     for key, value in form.errors.iteritems():
         label = u'%s' % form[key].label 
