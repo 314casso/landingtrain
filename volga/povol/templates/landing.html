@@ -432,9 +432,9 @@
 											<td>{{ line.status }}</td>
 											<td>{{ line.train_number }}</td>
 											<td>{{ line.place_of_departure }}</td>
-											<td>{{ line.departure_date }}</td>
+											<td>{{ line.departure_date|date:"SHORT_DATE_FORMAT" }}</td>
 											<td>{{ line.destination }}</td>
-											<td>{{ line.date_of_arrival }}</td>
+											<td>{{ line.date_of_arrival|date:"SHORT_DATE_FORMAT" }}</td>
 										</tr>										
 										{% endfor %}										
 									</table>
