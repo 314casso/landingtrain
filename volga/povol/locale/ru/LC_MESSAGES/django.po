@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-25 09:51+0300\n"
+"POT-Creation-Date: 2017-08-03 10:08+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,22 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: forms.py:6 templates/landing.html:500
+msgid "Name"
+msgstr "Ваше имя"
+
+#: forms.py:7
+msgid "Email"
+msgstr "Ваш E-mail"
+
+#: forms.py:8 templates/landing.html:506
+msgid "Phone No. (optionally)"
+msgstr "Ваш тел. (по желанию)"
+
+#: forms.py:9 templates/landing.html:509
+msgid "Message"
+msgstr "Ваше сообщение"
 
 #: services.py:32
 msgid "Booking are open"
@@ -57,11 +73,11 @@ msgstr "Преимущества"
 msgid "Prices"
 msgstr "Стоимость"
 
-#: templates/landing.html:65 templates/landing.html:419
+#: templates/landing.html:65 templates/landing.html:423
 msgid "Schedule"
 msgstr "Расписание"
 
-#: templates/landing.html:73 templates/landing.html:451
+#: templates/landing.html:73 templates/landing.html:455
 msgid "About us"
 msgstr "О нас"
 
@@ -89,7 +105,7 @@ msgstr "Быстро"
 msgid "Convenient"
 msgstr "Удобно"
 
-#: templates/landing.html:138 templates/landing.html:525
+#: templates/landing.html:138 templates/landing.html:529
 msgid "Apply Now"
 msgstr "Подать заявку"
 
@@ -204,7 +220,8 @@ msgstr "Тип контейнера"
 #: templates/landing.html:384 templates/landing.html:388
 #: templates/landing.html:392 templates/landing.html:396
 #: templates/landing.html:400 templates/landing.html:404
-msgid "Rub."
+#: templates/landing.html:408
+msgid "rub."
 msgstr "руб."
 
 #: templates/landing.html:343 templates/landing.html:365
@@ -228,68 +245,68 @@ msgstr ""
 "не включают в себя любые портовые или линейные сборы в Новороссийске."
 
 #: templates/landing.html:379
-msgid "Togliatti (city)"
-msgstr "Тольятти (по городу)"
+msgid "Terminal handling in Togliatti for 20’/40’"
+msgstr "Терминальная обработка в Тольятти для 20’/40’"
 
 #: templates/landing.html:383
+msgid "Togliatti (within city limits)"
+msgstr "Тольятти (по городу)"
+
+#: templates/landing.html:387
 msgid "Samara"
 msgstr "Самара"
 
-#: templates/landing.html:387
+#: templates/landing.html:391
 msgid "Ulyanovsk"
 msgstr "Ульяновск"
 
-#: templates/landing.html:391
+#: templates/landing.html:395
 msgid "Penza"
 msgstr "Пенза"
 
-#: templates/landing.html:395
+#: templates/landing.html:399
 msgid "Saransk"
 msgstr "Саранск"
 
-#: templates/landing.html:399
+#: templates/landing.html:403
 msgid "Nizhnekamsk"
 msgstr "Нижнекамск"
 
-#: templates/landing.html:403
+#: templates/landing.html:407
 msgid "Yelabuga"
 msgstr "Елабуга"
 
-#: templates/landing.html:407
+#: templates/landing.html:411
 msgid ""
-"These rates include the costs of loading / unloading of the container at "
-"Togliatti station and trucking to the destination, returning of the empty "
-"container to the station."
-msgstr ""
-"Указанные ставки включают в себя расходы по погрузке/выгрузке контейнера на "
-"станции Тольятти и автодоставку до места назначения, возврат порожнего "
-"контейнера на станцию."
+"The indicated rates of trucking are valid for the weight of the cargo up to "
+"20 tons."
+msgstr "Указанные ставки автоперевозки действительны для веса груза до 20 тонн."
 
-#: templates/landing.html:423
+#: templates/landing.html:427
 msgid "Status"
 msgstr "Статус"
 
-#: templates/landing.html:424
+#: templates/landing.html:428
 msgid "Train Number"
 msgstr "Номер поезда"
 
-#: templates/landing.html:425
+#: templates/landing.html:429
 msgid "Place of departure"
 msgstr "Место отправления"
 
-#: templates/landing.html:426
+#: templates/landing.html:430
 msgid "Departure date"
 msgstr "Дата отправления"
 
-#: templates/landing.html:427
+#: templates/landing.html:431
 msgid "Destination"
 msgstr "Место назначения"
 
-#: templates/landing.html:428
+#: templates/landing.html:432
 msgid "Date of arrival"
 msgstr "Дата прибытия"
 
-#: templates/landing.html:442
+#: templates/landing.html:446
 msgid ""
 "Acceptance of applications for transportation ends 5 days before the planned "
 "date of departure of the train."
@@ -297,7 +314,7 @@ msgstr ""
 "Прием заявок на перевозку заканчивается за 5 дней до планируемой даты "
 "отправления поезда."
 
-#: templates/landing.html:452
+#: templates/landing.html:456
 msgid ""
 "RUSCON is an intermodal operator providing complex services for the delivery "
 "of container cargo."
@@ -305,7 +322,7 @@ msgstr ""
 "Компания RUSCON это интермодальный оператор, оказывающий комплексные услуги "
 "по доставке контейнерных грузов."
 
-#: templates/landing.html:453
+#: templates/landing.html:457
 msgid ""
 "One of our specializations is container transportation by rail. Every month "
 "we ship more than 20 container trains."
@@ -313,7 +330,7 @@ msgstr ""
 "Одна из наших специализаций - это контейнерные перевозки по железной дороге. "
 "Каждый месяц мы отправляем более 20 контейнерных поездов."
 
-#: templates/landing.html:455
+#: templates/landing.html:459
 msgid ""
 "If you are already our Client and you were interested in our Povolzhsky "
 "Express service,"
@@ -321,7 +338,7 @@ msgstr ""
 "Если Вы уже являетесь нашим Клиентом и Вас заинтересовала наша услуга "
 "Поволжский экспресс,"
 
-#: templates/landing.html:456
+#: templates/landing.html:460
 msgid ""
 "you can ask clarifying questions or order a service by contacting your "
 "personal manager."
@@ -329,7 +346,7 @@ msgstr ""
 "то задать уточняющие вопросы или заказать услугу Вы сможете, обратившись к "
 "Вашему личному менеджеру."
 
-#: templates/landing.html:457
+#: templates/landing.html:461
 msgid ""
 "If you are not our Client yet, please send your questions about cooperation "
 "or Povolzhsky Express  service  to"
@@ -337,19 +354,19 @@ msgstr ""
 "Если Вы еще на работает с нами, то Ваши вопросы по началу сотрудничества или "
 "услуге Поволжский экспресс просьба адресовать на"
 
-#: templates/landing.html:461 templates/landing.html:489
+#: templates/landing.html:465 templates/landing.html:493
 msgid "Contact us"
 msgstr "Связаться с нами"
 
-#: templates/landing.html:479
+#: templates/landing.html:483
 msgid "«RUSCON»"
 msgstr "Рускон"
 
-#: templates/landing.html:479
+#: templates/landing.html:483
 msgid "— container transport"
 msgstr "— контейнерные перевозки"
 
-#: templates/landing.html:491
+#: templates/landing.html:495
 msgid ""
 "Let us know your cargo information or ask your question in-cluding your "
 "contact information"
@@ -357,35 +374,33 @@ msgstr ""
 "Сообщите нам данные по Вашему грузу или задайте Ваш вопрос, указав ваши "
 "контактные данные"
 
-#: templates/landing.html:496
-#| msgid "Name *"
-msgid "Name"
-msgstr "Ваше имя"
-
-#: templates/landing.html:499
-#| msgid "E-mail *"
+#: templates/landing.html:503
 msgid "E-mail"
 msgstr "Ваш E-mail"
 
-#: templates/landing.html:502
-msgid "Phone No. (optionally)"
-msgstr "Ваш тел. (по желанию)"
-
-#: templates/landing.html:505
-msgid "Message"
-msgstr "Ваше сообщение"
-
-#: templates/landing.html:508
+#: templates/landing.html:512
 msgid "Send"
 msgstr "Отправить"
 
-#: templates/landing.html:516
+#: templates/landing.html:520
 msgid "Status submit the form:"
 msgstr "Статус отправки формы:"
 
-#: views.py:29
+#: templates/landing.html:522
 msgid "Your message was successfully sent"
 msgstr "Ваше сообщение успешно отправлено"
+
+#~ msgid ""
+#~ "These rates include the costs of loading / unloading of the container at "
+#~ "Togliatti station and trucking to the destination, returning of the empty "
+#~ "container to the station."
+#~ msgstr ""
+#~ "Указанные ставки включают в себя расходы по погрузке/выгрузке контейнера "
+#~ "на станции Тольятти и автодоставку до места назначения, возврат порожнего "
+#~ "контейнера на станцию."
+
+#~ msgid "Rub."
+#~ msgstr "руб."
 
 #~ msgid "Phone"
 #~ msgstr "Телефон"
