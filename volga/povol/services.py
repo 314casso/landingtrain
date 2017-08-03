@@ -41,6 +41,8 @@ def get_movements_data():
     for line in dict_reader:
         newline = {}
         for key, value in line.iteritems():
+            if not key in key_mapper:
+                continue                
             newkey = key_mapper[key]                                     
             if newkey in data_keys:
                 newline[newkey] = datetime.datetime.strptime(value, "%d.%m.%Y").date()
